@@ -34,6 +34,6 @@ func main() {
 	macroAnalysisResult := prepareResult()
 
 	if writeError := writeMacroResult(macroAnalysisResult); writeError != nil {
-		log.Fatalln("Error occured while writing  results :", writeError)
+		log.Fatalln("Error occured while writing results :", writeError)
 	}
 }
