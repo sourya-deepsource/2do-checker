@@ -10,7 +10,7 @@ import (
 	"github.com/karrick/godirwalk"
 )
 
-// getAllFiles walks through the code dir and logs all the files
+// getAllFiles walks through the code directory and logs all the files
 func getAllFiles() ([]string, error) {
 	fileCount := 0
 
