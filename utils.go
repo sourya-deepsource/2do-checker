@@ -40,7 +40,8 @@ func getAllFiles() ([]string, error) {
 
 func createIssue(filePath string, lineNumber, column int) {
 	vcsPath := path.Base(filePath)
-
+	actualLineNumber := lineNumber+1
+	
 	issue := Issue{
 		Code:  "I001",
 		Title: "Possible TODO comment found",
@@ -48,11 +49,11 @@ func createIssue(filePath string, lineNumber, column int) {
 			Path: vcsPath,
 			Position: Position{
 				Begin: Coordinate{
-					Line:   lineNumber,
+					Line:   actualLineNumber,
 					Column: column,
 				},
 				End: Coordinate{
-					Line: lineNumber,
+					Line: actualLineNumber,
 				},
 			},
 		},
