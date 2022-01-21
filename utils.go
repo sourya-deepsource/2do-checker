@@ -19,7 +19,7 @@ func getAllFiles() ([]string, error) {
 		Callback: func(osPathname string, de *godirwalk.Dirent) error {
 			// Following string operation is not most performant way
 			// of doing this, but common enough to warrant a simple
-			// example here:
+			// example here: 
 			if strings.Contains(osPathname, ".git") {
 				return godirwalk.SkipThis
 			}
