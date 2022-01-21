@@ -10,11 +10,16 @@ type Metric struct {
 	Namespaces []Namespace `json:"namespaces"`
 }
 
+type Error struct {
+	HMessage string `json:"hmessage"`
+	Level    int    `json:"level"`
+}
+
 type MacroResult struct {
 	Issues    []Issue     `json:"issues"`
 	Metrics   []Metric    `json:"metrics,omitempty"`
 	IsPassed  bool        `json:"is_passed"`
-	Errors    bool        `json:"errors"`
+	Errors    []Error     `json:"errors"`
 	ExtraData interface{} `json:"extra_data"`
 }
 
