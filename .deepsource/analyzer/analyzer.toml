@@ -11,13 +11,16 @@ visibility = "public"
 [build]
   image = "golang:1.17.6-alpine3.15"
   steps = """
-  apk add --no-cache go openssh shadow
+  apk add --no-cache go openssh shadow git grep
   export GOROOT=/usr/lib/go
   export GOPATH=/go
   export PATH=/go/bin:${PATH}
   mkdir -p ${GOPATH}/src ${GOPATH}/bin
   pwd
-  cd ../../
+  cd ..
+  pwd
+  cd ..
+  pwd
   cp -R . /app
   git config --global url.git@github.com:.insteadOf https://github.com/
   go env -w GOPRIVATE=github.com/siddhant-deepsource/*
