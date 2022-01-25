@@ -11,7 +11,7 @@ visibility = "public"
 [build]
   image = "golang:1.17.6-alpine3.15"
   steps = """
-  apk add --no-cache go openssh
+  apk add --no-cache go openssh shadow
   export GOROOT=/usr/lib/go
   export GOPATH=/go
   export PATH=/go/bin:${PATH}
