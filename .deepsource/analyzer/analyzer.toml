@@ -16,7 +16,11 @@ visibility = "public"
   export GOPATH=/go
   export PATH=/go/bin:${PATH}
   mkdir -p ${GOPATH}/src ${GOPATH}/bin
-  cp -R ../../ /app
+  ls
+  pwd
+  ls ../
+  ls ../../
+  cp -R ../../. /app
   git config --global url.git@github.com:.insteadOf https://github.com/
   go env -w GOPRIVATE=github.com/siddhant-deepsource/*
   cd /app
