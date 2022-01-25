@@ -43,3 +43,4 @@ type Issue struct {
 	Title    string   `json:"issue_text"`
 	Location Location `json:"location"`
 }
+
