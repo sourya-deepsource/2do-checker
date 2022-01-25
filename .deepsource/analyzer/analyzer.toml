@@ -12,7 +12,7 @@ visibility = "public"
   image = "golang:1.17.6-bullseye"
   steps = """
   apt-get update
-  apt-get install -y --no-install-recommends openssh shadow git grep
+  apt-get install -y --no-install-recommends openssh-server git grep
   cp -R . /app
   git config --global url.git@github.com:.insteadOf https://github.com/
   go env -w GOPRIVATE=github.com/siddhant-deepsource/*
