@@ -16,7 +16,7 @@ var (
 func main() {
 	analysisFiles, err := getAllFiles()
 	if err != nil {
-		log.Fatalln("Failed to read files  to analyze. Exiting....")
+		log.Fatalln("Failed to read files  to analyze. Exiting...")
 	}
 
 	for _, path := range analysisFiles {
