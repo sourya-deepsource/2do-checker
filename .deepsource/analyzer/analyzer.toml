@@ -1,9 +1,6 @@
 version = "1"
 name = "Todo comments checker"
 description = "Finds the TODO comments in codebase."
-analysis_command = "/app/todo-checker"
-category = "language"
-visibility = "public"
 
 [analyzer]
   command = "/app/todo-checker"
@@ -18,17 +15,3 @@ visibility = "public"
   cd /app
   CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /app/todo-checker .
   """
-
-# [build]
-#   image = "golang:1.17.6-bullseye"
-#   steps = """
-#   apt-get update
-#   apt-get install -y --no-install-recommends openssh-server git grep
-#   cp -R . /app
-#   git config --global url.git@github.com:.insteadOf https://github.com/
-#   go env -w GOPRIVATE=github.com/siddhant-deepsource/*
-#   cd /app
-#   CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /app/todo-checker .
-  # """
-
-
